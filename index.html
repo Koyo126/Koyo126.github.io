@@ -1,0 +1,16 @@
+---
+layout: default
+title: ホーム
+---
+
+<h1>最新の投稿</h1>
+
+<ul>
+  <!-- _postsディレクトリ内の全記事（site.posts）を一つずつ取り出してループ処理  --!>
+  {% for post in site.posts %}
+    <li>
+      <span style="color: #666;">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
